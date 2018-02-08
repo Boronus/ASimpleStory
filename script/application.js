@@ -1,4 +1,5 @@
 import '../main.css';
+import { Canvas } from './canvas.js';
 
 /*class Animal {
     constructor(name) {
@@ -12,21 +13,7 @@ import '../main.css';
 const animal = new Animal('animal');
 animal.speak();*/
 
-class Canvas {
-    constructor() {
-        this.element = document.getElementById('game_canvas');
-        this.resize();
-        this.element.style.background = 'lightgray';
-        window.onresize = this.resize;
-    }
-    resize() {
-        console.log('resize');
-        let canvas = document.getElementById('game_canvas');
-        //console.log( window.innerHeight );
-        canvas.width = document.body.clientWidth;
-        canvas.height = document.body.clientHeight;
-    }
-}
+
 
 const canvas = new Canvas();
 
@@ -46,8 +33,11 @@ myFont.load().then(function(font){
     ctx.moveTo(0,0);
     ctx.lineTo(300,150);
     ctx.stroke();
-
 });
+
+setTimeout( function () {
+    ctx.fillText('A Simple Story', 120, 110);
+}, 1000);
 
 
 
