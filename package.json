@@ -1,0 +1,21 @@
+{
+  "name": "ASimpleStory",
+  "version": "1.0",
+  "description": "Interactive fiction",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "webpack-dev-server"
+  },
+  "author": "Dmitrii Boronin",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.9",
+    "style-loader": "^0.20.1",
+    "uglifyjs-webpack-plugin": "^1.1.6"
+  },
+  "dependencies": {
+    "webpack": "^3.10.0"
+  }
+}

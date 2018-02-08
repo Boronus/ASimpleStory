@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Determination';
+    src: url('/fonts/determination.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+
+#game-canvas {
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
