@@ -8,8 +8,7 @@ export class Canvas {
     resize() {
         console.log('resize');
         let canvas = document.getElementById('game_canvas');
-        //console.log( window.innerHeight );
         canvas.width = document.body.clientWidth;
         canvas.height = document.body.clientHeight;
     }
-};
+}

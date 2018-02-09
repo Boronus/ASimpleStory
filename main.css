@@ -16,11 +16,35 @@ body {
     margin: 0;
     padding: 0;
     height:100%;
+    font-family: 'Determination';
+    font-size: 20px;
 }
 
-#game-canvas {
-    display: block;
+#game_textbox {
+    padding: 20px;
+    background: whitesmoke;
+    overflow: auto;
+    height: 500px;
     position: absolute;
-    margin: 0;
-    padding: 0;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    z-index: 1;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

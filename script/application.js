@@ -1,31 +1,19 @@
 import '../main.css';
 import { Canvas } from './canvas.js';
+import { Caracter } from './caracter.js';
 
-/*class Animal {
-    constructor(name) {
-        this.name = name;
-    }
-    speak() {
-        console.log(this.name + ' makes a noise.');
-    }
-}
-
-const animal = new Animal('animal');
-animal.speak();*/
-
-
+import { events } from './lines/line-base/line-base-scene-1.js';
 
 const canvas = new Canvas();
 
 let canvasE = document.getElementById('game_canvas');
 let ctx = canvasE.getContext('2d');
+let myFont = new FontFace('Determination', 'url(/fonts/determination.otf)');
 
-var myFont = new FontFace('Determination', 'url(/fonts/determination.otf)');
+let textbox = document.getElementById('game_textbox');
 
 myFont.load().then(function(font){
     document.fonts.add(font);
-
-    //console.log('Font loaded');
     ctx.font = '50px "Determination"';
     ctx.textBaseline = 'top';
     ctx.fillText('A Simple Story', 20, 10);
@@ -35,9 +23,16 @@ myFont.load().then(function(font){
     ctx.stroke();
 });
 
-setTimeout( function () {
-    ctx.fillText('A Simple Story', 120, 110);
-}, 1000);
 
 
+let andrei = new Caracter('Andrei');
+console.log( andrei );
+
+console.log( events );
+showText(events[0]);
+
+function showText ( text ) {
+    console.log( text );
+    textbox.innerHtml = text;
+}
 
